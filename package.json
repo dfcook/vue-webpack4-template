@@ -53,6 +53,11 @@
     "webpack-merge": "^4.1.2"
   },
   "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,vue}"
+    ],
+    "coverageDirectory": ".jest_coverage",
     "moduleFileExtensions": [
       "js",
       "vue"
