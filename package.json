@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "webpack-dev-server --progress --config build/webpack.config.dev.js",
     "prod": "webpack --config build/webpack.config.prod.js",
-    "lint": "eslint --ext .js,.vue ./",
-    "lint:fix": "eslint --ext .js,.vue ./ --fix"
+    "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "test": "cross-env NODE_ENV=test nyc mocha-webpack --webpack-config build/webpack.config.dev.js --require test/setup.js test/**/*.spec.js"
   },
   "keywords": [
     "Vue",
@@ -22,8 +23,10 @@
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.4",
+    "babel-plugin-istanbul": "^4.1.5",
     "babel-preset-env": "^1.6.1",
     "copy-webpack-plugin": "^4.5.1",
+    "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",
     "eslint": "^4.18.2",
     "eslint-config-standard": "^11.0.0",
@@ -33,14 +36,29 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.3.0",
+    "expect": "^23.0.0-alpha.0",
     "html-webpack-plugin": "^3.0.6",
+    "jsdom": "^11.6.2",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.0.4",
+    "mocha-webpack": "^1.1.0",
+    "nyc": "^11.6.0",
     "style-loader": "^0.20.3",
     "url-loader": "^1.0.1",
     "vue-loader": "^14.2.1",
     "vue-template-compiler": "^2.5.16",
+    "vue-test-utils": "^1.0.0-beta.11",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1",
-    "webpack-merge": "^4.1.2"
+    "webpack-merge": "^4.1.2",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.(js|vue)"
+    ],
+    "instrument": false,
+    "sourceMap": false
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="container centered">
+  <div class="container center-content">
     <router-view />
   </div>
 </template>

@@ -6,16 +6,16 @@ const utils = require('./utils')
 
 module.exports = {
   entry: [
-    './app.js'
+    './src/app.js'
   ],
 
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'assets': utils.resolve('assets'),
-      'pages': utils.resolve('pages'),
+      'pages': utils.resolve('src/pages'),
       'static': utils.resolve('static'),
-      'components': utils.resolve('components')
+      'components': utils.resolve('src/components')
     }
   },
 
