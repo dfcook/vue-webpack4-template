@@ -8,5 +8,12 @@
     }],
     "stage-2"
   ],
-  "plugins": ["istanbul"]
+  "plugins": ["istanbul"],
+  "env": {
+    "test": {
+      "presets": [
+        ["env", { "targets": { "node": "current" }}]
+      ]
+    }
+}
 }
