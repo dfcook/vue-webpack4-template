@@ -12,6 +12,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
+      'assets': utils.resolve('assets'),
       'pages': utils.resolve('pages'),
       'static': utils.resolve('static'),
       'components': utils.resolve('components')
@@ -30,6 +31,9 @@ module.exports = {
       }, {
         test: /\.js$/,
         loader: 'babel-loader'
+      }, {
+        test: /\.css$/,
+        loaders: [ 'style-loader', 'css-loader' ]
       }, {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',

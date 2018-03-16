@@ -1,5 +1,7 @@
 <template>
-  <h3>Hello {{ name }}</h3>
+  <div>
+    <h3>Hello {{ name }} from my Vue.js page, built with Webpack 4!</h3>
+  </div>
 </template>
 
 <script>

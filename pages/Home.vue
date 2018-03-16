@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="full-width center-content">
     <img src="/static/img/logo.png" >
     <welcome-message name="World" />
   </div>

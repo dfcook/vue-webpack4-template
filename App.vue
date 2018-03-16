@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container centered">
     <router-view />
   </div>
 </template>
@@ -7,7 +7,6 @@
 <style scoped>
 .container {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  display: flex;
   max-width: 1200px;
 }
 </style>
