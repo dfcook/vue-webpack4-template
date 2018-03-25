@@ -5,10 +5,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const utils = require('./utils')
 
 module.exports = {
-  entry: [
-    './src/app.js'
-  ],
-
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
@@ -34,9 +30,6 @@ module.exports = {
         query: {
           compact: 'false'
         }
-      }, {
-        test: /\.css$/,
-        loaders: [ 'style-loader', 'css-loader' ]
       }, {
         test: /\.styl$/,
         loaders: [ 'style-loader', 'css-loader', 'stylus-loader' ]
