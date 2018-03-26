@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 
 .container
   font-family 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif

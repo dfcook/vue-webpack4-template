@@ -26,6 +26,21 @@ module.exports = merge(baseConfig, {
     }
   },
 
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      }, {
+        test: /\.css$/,
+        loaders: [ 'style-loader', 'css-loader' ]
+      }, {
+        test: /\.styl$/,
+        loaders: [ 'style-loader', 'css-loader', 'stylus-loader' ]
+      }
+    ]
+  },
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin()

@@ -22,17 +22,11 @@ module.exports = {
         loader: 'eslint-loader',
         enforce: 'pre'
       }, {
-        test: /\.vue$/,
-        loader: 'vue-loader'
-      }, {
         test: /\.js$/,
         loader: 'babel-loader',
         query: {
           compact: 'false'
         }
-      }, {
-        test: /\.styl$/,
-        loaders: [ 'style-loader', 'css-loader', 'stylus-loader' ]
       }, {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
