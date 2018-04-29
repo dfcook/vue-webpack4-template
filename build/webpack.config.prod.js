@@ -20,8 +20,11 @@ module.exports = merge(baseConfig, {
   module: {
     rules: [
       {
-        test: /\.vue$/,
-        use: 'vue-loader'        
+        test: /\.css?$/,
+        use: [
+          MiniCssExtractPlugin.loader, 
+          'css-loader'
+        ]
       }, {
         test: /\.styl(us)?$/,
         use: [
