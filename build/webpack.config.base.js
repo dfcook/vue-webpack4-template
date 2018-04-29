@@ -2,6 +2,8 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
+
 const utils = require('./utils')
 
 module.exports = {
@@ -23,10 +25,12 @@ module.exports = {
         enforce: 'pre'
       }, {
         test: /\.js$/,
-        loader: 'babel-loader',
-        query: {
-          compact: 'false'
-        }
+        use: {
+          loader: 'babel-loader',
+          options: {
+            compact: 'false'
+          }
+        }        
       }, {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
@@ -57,7 +61,8 @@ module.exports = {
       filename: 'index.html',
       template: 'index.html',
       inject: true
-    }),
+    }),    
+    new VueLoaderPlugin(),
     new CopyWebpackPlugin([{
       from: utils.resolve('static/img'),
       to: utils.resolve('dist/static/img'),

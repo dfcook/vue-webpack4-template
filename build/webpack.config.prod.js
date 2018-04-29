@@ -2,7 +2,7 @@
 
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin  = require('mini-css-extract-plugin')
 
 module.exports = merge(baseConfig, {
   mode: 'production',
@@ -21,20 +21,20 @@ module.exports = merge(baseConfig, {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          extractCSS: true
-        }
+        use: 'vue-loader'        
       }, {
-        test: /\.css$/,
-        loader: ExtractTextWebpackPlugin.extract('css-loader')
-      }, {
-        test: /\.styl$/,
-        loader: ExtractTextWebpackPlugin.extract('css-loader!stylus-loader')
+        test: /\.styl(us)?$/,
+        use: [
+          MiniCssExtractPlugin.loader, 
+          'css-loader', 
+          'stylus-loader'
+        ]
       }
     ]
   },
   plugins: [
-    new ExtractTextWebpackPlugin("main.css")
+    new MiniCssExtractPlugin({
+      filename: 'main.css'
+    })
   ]
 })
