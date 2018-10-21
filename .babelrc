@@ -1,17 +1,11 @@
 {
   "presets": [
-    ["env", {
-      "modules": false,
+    ["@babel/preset-env", {
+      "modules": "commonjs",
       "targets": {
-        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"],
+        "node": "current"
       }
     }]
-  ],
-  "env": {
-    "test": {
-      "presets": [
-        ["env", { "targets": { "node": "current" }}]
-      ]
-    }
-}
+  ]
 }

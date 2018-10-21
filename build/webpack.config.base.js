@@ -25,15 +25,12 @@ module.exports = {
         enforce: 'pre'
       }, {
         test: /\.vue$/,
-        use: 'vue-loader'        
+        use: 'vue-loader'
       }, {
         test: /\.js$/,
         use: {
           loader: 'babel-loader',
-          options: {
-            compact: 'false'
-          }
-        }        
+        }
       }, {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: {
@@ -42,7 +39,7 @@ module.exports = {
             limit: 10000,
             name: utils.assetsPath('img/[name].[hash:7].[ext]')
           }
-        }        
+        }
       }, {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
         use: {
@@ -70,7 +67,7 @@ module.exports = {
       filename: 'index.html',
       template: 'index.html',
       inject: true
-    }),    
+    }),
     new VueLoaderPlugin(),
     new CopyWebpackPlugin([{
       from: utils.resolve('static/img'),
