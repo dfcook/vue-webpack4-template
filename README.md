@@ -3,6 +3,8 @@ VueJs template using Webpack 4
 
 This repository is an implementation of the 'Vue.js and Webpack 4 From Scratch' article series on [itnext.io](https://itnext.io).
 
+_For debug the test, first need to access `chrome:inspect` on Google Chrome and open the `Open dedicated DevTools for Node`_
+
 [Part 1](https://itnext.io/vuejs-and-webpack-4-from-scratch-part-1-94c9c28a534a):
   - Hot Module loading with webpack-dev-server
   - Linting using eslint
@@ -18,3 +20,4 @@ This repository is an implementation of the 'Vue.js and Webpack 4 From Scratch' 
   - Static assets processing
   - ESLint for linting
   - Testing using Jest
+    - _For debugging the tests, first need to open `chrome:inspect` on Google Chrome and click the Open dedicated DevTools for Node then run the command `npm run test:debug` from your console._
