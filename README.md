@@ -20,3 +20,4 @@ This repository is an implementation of the 'Vue.js and Webpack 4 From Scratch' 
   - Static assets processing
   - ESLint for linting
   - Testing using Jest
+    - _For debugging the tests, first need to open `chrome:inspect` on Google Chrome and click the Open dedicated DevTools for Node then run the command `npm run test:debug` from your console._
