@@ -20,10 +20,7 @@ module.exports = merge(baseConfig, {
     open: true,
     overlay: { warnings: false, errors: true },
     publicPath: '/',
-    quiet: true,
-    watchOptions: {
-      poll: true
-    }
+    quiet: true
   },
 
   module: {
