@@ -5,6 +5,12 @@ cache:
     - ~/.npm
 notifications:
   email: false
-node_js: '8'
+node_js:
+  - "6"
+  - "8"
+  - "10"
+  - "11"
 install: npm install
-script: npm run test
+script: npm test
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

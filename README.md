@@ -4,6 +4,7 @@ VueJs template using Webpack 4
 This repository is an implementation of the 'Vue.js and Webpack 4 From Scratch' article series on [itnext.io](https://itnext.io).
 
 [![Build Status](https://travis-ci.com/dfcook/vue-webpack4-template.svg?branch=master)](https://travis-ci.com/dfcook/vue-webpack4-template)
+[![codecov](https://codecov.io/gh/dfcook/vue-webpack4-template/branch/master/graph/badge.svg)](https://codecov.io/gh/dfcook/vue-webpack4-template)
 
 [Part 1](https://itnext.io/vuejs-and-webpack-4-from-scratch-part-1-94c9c28a534a):
   - Hot Module loading with webpack-dev-server
