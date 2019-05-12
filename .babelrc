@@ -7,5 +7,10 @@
         "node": "current"
       }
     }]
+  ],
+  "plugins": [
+    "@babel/syntax-dynamic-import",
+    "@babel/transform-runtime",
+    "@babel/transform-async-to-generator"
   ]
 }
