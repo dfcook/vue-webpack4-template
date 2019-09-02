@@ -1,14 +1,14 @@
-import { shallowMount } from '@vue/test-utils'
+import { render } from '@testing-library/vue'
 import WelcomeMessage from '@/components/Home/WelcomeMessage'
 
 describe('WelcomeMessage.vue', () => {
   it('renders props.msg when passed', () => {
     const name = 'tester'
 
-    const wrapper = shallowMount(WelcomeMessage, {
+    const { findByText } = render(WelcomeMessage, {
       propsData: { name }
     })
 
-    expect(wrapper.text()).toBe('Hello tester from my Vue.js page, built with Webpack 4!')
+    findByText('Hello tester from my Vue.js page, built with Webpack 4!')
   })
 })
