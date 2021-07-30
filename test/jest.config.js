@@ -14,6 +14,7 @@ module.exports = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
   },
+  testEnvironment: 'jsdom',
   transform: {
     '^.+\\.js$': 'babel-jest',
     '^.+\\.vue$': 'vue-jest'
